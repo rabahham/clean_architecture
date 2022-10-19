@@ -1,6 +1,7 @@
 import 'package:clean_architecture/presentation/forgot_password/forgot_password_screen.dart';
 import 'package:clean_architecture/presentation/login/Login_screen.dart';
 import 'package:clean_architecture/presentation/main/main_screen.dart';
+import 'package:clean_architecture/presentation/onBording/onBordingScreen.dart';
 import 'package:clean_architecture/presentation/register/register_screen.dart';
 import 'package:clean_architecture/presentation/resources/strings_manager.dart';
 import 'package:clean_architecture/presentation/splash/splash-screen.dart';
@@ -10,6 +11,7 @@ import 'package:flutter/material.dart';
 
 class RoutesManager {
   static const String splashRoute = "/";
+  static const String onBordingRoute = "/onBording";
   static const String loginRoute = "/login";
   static const String registerRoute = "/register";
   static const String forgotPassWordRoute = "/forgotPassWord";
@@ -22,6 +24,8 @@ class RouteGenerator {
     switch (settings.name) {
       case RoutesManager.splashRoute:
         return MaterialPageRoute(builder: (_) => SplashScreen());
+      case RoutesManager.onBordingRoute:
+        return MaterialPageRoute(builder: (_) => OnBordingScreen());
       case RoutesManager.loginRoute:
         return MaterialPageRoute(builder: (_) => LoginScreen());
       case RoutesManager.registerRoute:
