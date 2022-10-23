@@ -12,6 +12,7 @@ class AppString {
       "Tut APP is &n &wesome flutter application using clean architacture #3";
   static const onBordingSubTatile4 =
       "Tut APP is &n &wesome flutter application using clean architacture #4";
+  static const skip = "Skip";
 }
 
 
