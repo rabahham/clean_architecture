@@ -13,4 +13,11 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Container();
   }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    // viewmodel.dispose
+    super.dispose();
+  }
 }
