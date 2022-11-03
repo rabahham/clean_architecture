@@ -1,7 +1,7 @@
 import 'package:clean_architecture/presentation/forgot_password/forgot_password_screen.dart';
 import 'package:clean_architecture/presentation/login/Login_screen.dart';
 import 'package:clean_architecture/presentation/main/main_screen.dart';
-import 'package:clean_architecture/presentation/onBording/onBordingScreen.dart';
+import 'package:clean_architecture/presentation/onBording/viewOnBording/onBordingScreen.dart';
 import 'package:clean_architecture/presentation/register/register_screen.dart';
 import 'package:clean_architecture/presentation/resources/strings_manager.dart';
 import 'package:clean_architecture/presentation/splash/splash-screen.dart';
