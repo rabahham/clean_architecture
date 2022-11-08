@@ -1,4 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
+
+import '../../domain/models/models.dart';
 part 'responses.g.dart';
 
 @JsonSerializable()
@@ -20,7 +22,7 @@ class CustomerResponse {
   @JsonKey(name: "name")
   String? name;
   @JsonKey(name: "numOFNotification")
-  String? numOFNotification;
+  int? numOFNotification;
   CustomerResponse({
     this.id,
     this.name,
@@ -58,9 +60,9 @@ class ContactsResponse {
 @JsonSerializable()
 class AuthenticationResponse extends BaseResponse {
   @JsonKey(name: "customer")
-  String? customer;
+  Customer? customer;
   @JsonKey(name: "contacts")
-  String? contacts;
+  Contacts? contacts;
   AuthenticationResponse({
     this.customer,
     this.contacts,

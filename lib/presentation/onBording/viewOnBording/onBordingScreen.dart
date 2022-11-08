@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors_in_immutables
 
-import 'package:clean_architecture/domain/models/slider_object_modle.dart';
+import 'package:clean_architecture/domain/models/models.dart';
 import 'package:clean_architecture/presentation/onBording/viewmodelonbording/onbording_viewmodel.dart';
 import 'package:clean_architecture/presentation/resources/assets_manager.dart';
 import 'package:clean_architecture/presentation/resources/color_manager.dart';
@@ -46,7 +46,9 @@ class _OnBordingScreenState extends State<OnBordingScreen> {
 
   Widget _getContentWidget(SliderViewObject? sliderViewObject) {
     if (sliderViewObject == null) {
-      return Container();
+      return Container(
+        child: Center(child: Text('jjjjjjjj')),
+      );
     } else
       return Scaffold(
         backgroundColor: ColorManager.white,

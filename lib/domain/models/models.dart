@@ -20,13 +20,13 @@ class SliderViewObject {
 
 // login models
 
-class Costmer {
+class Customer {
   String id;
 
   String name;
 
-  String numOFNotification;
-  Costmer(this.id, this.name, this.numOFNotification);
+  int numOFNotification;
+  Customer(this.id, this.name, this.numOFNotification);
 }
 
 // login Contacts
@@ -43,9 +43,9 @@ class Contacts {
 // login Authentication
 
 class Authentication {
-  String customer;
+  Customer? customer;
 
-  String contacts;
+  Contacts? contacts;
 
   Authentication(this.customer, this.contacts);
 }

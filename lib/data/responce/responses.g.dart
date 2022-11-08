@@ -21,7 +21,7 @@ CustomerResponse _$CustomerResponseFromJson(Map<String, dynamic> json) =>
     CustomerResponse(
       id: json['id'] as String?,
       name: json['name'] as String?,
-      numOFNotification: json['numOFNotification'] as String?,
+      numOFNotification: json['numOFNotification'] as int?,
     );
 
 Map<String, dynamic> _$CustomerResponseToJson(CustomerResponse instance) =>
@@ -48,8 +48,8 @@ Map<String, dynamic> _$ContactsResponseToJson(ContactsResponse instance) =>
 AuthenticationResponse _$AuthenticationResponseFromJson(
         Map<String, dynamic> json) =>
     AuthenticationResponse(
-      customer: json['customer'] as String?,
-      contacts: json['contacts'] as String?,
+      customer: json['customer'] as Customer?,
+      contacts: json['contacts'] as Contacts?,
     )
       ..status = json['status'] as int?
       ..message = json['message'] as String?;
