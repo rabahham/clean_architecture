@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:clean_architecture/domain/models/slider_object_modle.dart';
+import 'package:clean_architecture/domain/models/models.dart';
 import 'package:clean_architecture/presentation/base/baseViewModel.dart';
 import 'package:clean_architecture/presentation/resources/assets_manager.dart';
 
