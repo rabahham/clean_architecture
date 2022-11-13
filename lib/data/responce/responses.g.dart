@@ -48,8 +48,8 @@ Map<String, dynamic> _$ContactsResponseToJson(ContactsResponse instance) =>
 AuthenticationResponse _$AuthenticationResponseFromJson(
         Map<String, dynamic> json) =>
     AuthenticationResponse(
-      customer: json['customer'] as Customer?,
-      contacts: json['contacts'] as Contacts?,
+      customer: json['customer'] as CustomerResponse?,
+      contacts: json['contacts'] as ContactsResponse?,
     )
       ..status = json['status'] as int?
       ..message = json['message'] as String?;

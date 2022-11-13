@@ -1,3 +1,6 @@
+import 'package:clean_architecture/data/data_source/remote_data_source.dart';
+import 'package:clean_architecture/data/mapper/mapper.dart';
+import 'package:clean_architecture/data/network/network_info.dart';
 import 'package:dartz/dartz.dart';
 
 import 'package:clean_architecture/domain/models/models.dart';
@@ -9,11 +12,29 @@ import 'package:clean_architecture/data/network/failure.dart';
 import '../../domain/repositry/repository.dart';
 
 class RepositoryImpl implements Repository {
-  RepositoryImpl();
+  RemoteDataSource _remoteDataSource;
+  NetWorkInfo _netWorkInfo;
+  RepositoryImpl(this._remoteDataSource, this._netWorkInfo);
 
   @override
-  Future<Either<Failure, Authentication>> login(LoginRequest loginRequest) {
-    // TODO: implement login
-    throw UnimplementedError();
+  Future<Either<Failure, Authentication>> login(
+      LoginRequest loginRequest) async {
+    if (await _netWorkInfo.isConnected) {
+      // its connected to internet , its safe to call
+      final response = await _remoteDataSource.login(loginRequest);
+      if (response.status == 0) {
+        // success
+
+        return Right(response.toDomain());
+      } else {
+        // failure  -- buisiness error
+        return Left(Failure(
+            code: 409, message: response.message ?? "business error message "));
+      }
+    } else {
+      // entenet error
+      return Left(Failure(
+          code: 501, message: " plesse check your internet connection  "));
+    }
   }
 }

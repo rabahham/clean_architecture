@@ -60,9 +60,9 @@ class ContactsResponse {
 @JsonSerializable()
 class AuthenticationResponse extends BaseResponse {
   @JsonKey(name: "customer")
-  Customer? customer;
+  CustomerResponse? customer;
   @JsonKey(name: "contacts")
-  Contacts? contacts;
+  ContactsResponse? contacts;
   AuthenticationResponse({
     this.customer,
     this.contacts,

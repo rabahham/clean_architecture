@@ -24,10 +24,8 @@ extension ContactsResponseMapper on ContactsResponse? {
 extension AuthenticationResponseMapper on AuthenticationResponse? {
   Authentication toDomain() {
     return Authentication(
-      // this?.customer!.toDomain(),
-      // this?.contacts!.toDomain(),
-      this?.customer,
-      this?.contacts,
+      this?.customer.toDomain(),
+      this?.contacts.toDomain(),
     );
   }
 }
