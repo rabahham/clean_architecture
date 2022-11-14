@@ -6,6 +6,7 @@ import 'package:clean_architecture/data/responce/responses.dart';
 import 'package:clean_architecture/domain/models/models.dart';
 
 abstract class RemoteDataSource {
+  // for call apis
   Future<AuthenticationResponse> login(LoginRequest LoginRequest);
 }
 
